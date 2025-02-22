@@ -27,7 +27,12 @@ export default function mayanCalculate(obj, buttonName) {
 
   if (isNumber(buttonName)) {
     if (buttonName === '0' && obj.next === '0') {
-      return { };
+      return {
+        total: '0',
+        next: null,
+        operation: null,
+        mayan: '\u{1d2e0}',
+      };
     }
     // If there is an operation, update next
     if (obj.operation) {

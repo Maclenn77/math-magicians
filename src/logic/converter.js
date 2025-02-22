@@ -22,8 +22,12 @@ const vigesimalMayanNumeral = new Map([
 ]);
 
 export const convertToMayan = (number) => {
-  const result = parseInt(number, 10).toString(20);
   const mayanResult = [];
+  if (number === 'Can\'t divide by 0.') {
+    mayanResult.push('DivErr');
+    return mayanResult;
+  }
+  const result = parseInt(number, 10).toString(20);
   for (let i = 0; i < result.length; i += 1) {
     mayanResult.push(vigesimalMayanNumeral.get(result[i]));
   }
