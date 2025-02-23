@@ -1,6 +1,12 @@
 import operate from './mayan_operate';
 import { convertToMayan, convertToUnicode, convertToVigesimal } from './converter';
 
+const isNegativeNumber = (str) => {
+  const trimmedStr = String(str).trim();
+  const regex = /^-\d*\.?\d+$/;
+  return regex.test(trimmedStr);
+};
+
 function isNumber(item) {
   return !!item.match(/[0-9a-j]+/);
 }
@@ -22,6 +28,7 @@ export default function mayanCalculate(obj, buttonName) {
       next: null,
       operation: null,
       mayan: '\u{1d2e0}',
+      color: 'calc-mayan',
     };
   }
 
@@ -64,11 +71,13 @@ export default function mayanCalculate(obj, buttonName) {
     if (obj.next && obj.operation) {
       const result = operate(obj.total, obj.next, obj.operation);
       const resultInMayan = convertToMayan(result).join('');
+      const colorNumber = isNegativeNumber(result) ? 'calc-mayan neg' : 'calc-mayan';
       return {
         total: convertToVigesimal(result),
         next: null,
         operation: null,
         mayan: resultInMayan,
+        color: colorNumber,
       };
     }
     // '=' with no operation, nothing to do

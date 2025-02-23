@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import mayanCalculate from '../logic/mayan_calculate';
+import './MayanCalculator.css';
 
 const MayanCalculator = () => {
-  const [previousState, setState] = useState({ total: '0', mayan: '\u{1d2e0}' });
+  const [previousState, setState] = useState({ total: '0', mayan: '\u{1d2e0}', color: 'calc-mayan' });
 
   const handleEvent = (e) => {
     setState(mayanCalculate(previousState, e.target.id));
@@ -10,7 +11,7 @@ const MayanCalculator = () => {
   return (
     <div className="mayan-calculator">
       <div className="calc-display-m">
-        <p className="calc-mayan">
+        <p className={previousState.color}>
           {previousState.mayan}
           {previousState.operation}
           {previousState.nextMayan}
