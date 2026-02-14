@@ -3,32 +3,24 @@ import React from 'react';
 const Home = () => (
   <section>
     <h2>
-      Welcome to our page!
+    About This Mayan Calculator
     </h2>
     <p>
-      Mathematics ( includes the study of such topics as numbers (arithmetic and number theory),
-      formulas and related structures (algebra), shapes and spaces in which they are contained
-      (geometry), and quantities and their changes (calculus and analysis).There is no general
-      consensus about its exact scope or epistemological status.
+      The ancient Maya developed one of the most elegant number systems in history. Using just three symbols — a dot (1), a bar (5), and a shell (0) — they could represent any number in base-20 (vigesimal).
     </p>
 
     <p>
-      A software calculator is a calculator that has been implemented as a computer program,
-      rather than as a physical hardware device. They are among the simpler interactive
-      software tools, and, as such, they provide operations for the user to select one
-      at a time. They can be used to perform any process that consists of a sequence
-      of steps each of which applies one of these operations, and have no purpose other
-      than these processes, because the operations are the sole, or at least
-      the primary, features of the calculator, rather than being secondary
-      features that support other functionality that is not normally known simply
-      as calculation.
+      This calculator lets you perform arithmetic the way Mayan mathematicians did over a thousand years ago. Enter numbers, see them rendered in authentic dot-and-bar notation, and practice addition, subtraction, multiplication, and division in base-20.
     </p>
     <p>
-      Created by
+      Why base-20? The Maya likely counted using both fingers and toes. Their system was positional (like ours) but with place values of 1, 20, 400, 8000... instead of 1, 10, 100, 1000.
+    </p>
+    <p>
+      Built by
       <a href="https://juanpaulo.xyz"> Juan Paulo</a>
       .
       <br />
-      Check Repository:
+      View the source code on Github:
       <a href="https://github.com/maclenn77/math-magicians">Mayan Calculator</a>
     </p>
   </section>
